@@ -1,0 +1,140 @@
+//Добавлять в конце импорта шмрифтов
+//&display=swap&subset=cyrillic-ext
+
+//Переменные
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+@import "_null";
+
+body {
+	line-height: 1;
+	background-color: #fff;
+	//Шрифт по умолчанию
+	font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//------------------------------
+
+//Шрифты
+@import "_fonts";
+//=======================================
+
+/* Ограничивающий контейнер */
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 0 15px;
+}
+._ibg {
+	position: relative;
+	img {
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.pc {
+	// .pc__container
+	&__container {
+	}
+	// .pc__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(auto, 1fr);
+		@media (max-width: 1060px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media (max-width: 870px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: 650px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 450px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+.card-laptop {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 7px 24.5px 15px;
+	// .card-laptop__status
+	&__status {
+		margin: 0px 0px 7px 0px;
+	}
+	// .card-laptop__label
+	&__label {
+		width: 10px;
+		height: 10px;
+		margin: 5.5px 2px 0px 0px;
+	}
+	// .card-laptop__stock
+	&__stock {
+		font-size: 10px;
+		line-height: 2.1;
+		text-align: center;
+		color: #78a962;
+	}
+	// .card-laptop__image
+	&__image {
+		max-width: 150px;
+		margin: 0px 0px 10px 15px;
+	}
+	// .card-laptop__img
+	&__img {
+		width: 100%;
+	}
+	// .card-laptop__content
+	&__content {
+	}
+}
+.card-about {
+	// .card-about__stars
+	&__stars {
+		max-width: 73.16px;
+		margin: 0px 9px 0px 0px;
+		padding: 6px 0px 0px 0px;
+	}
+	// .card-about__reviews
+	&__reviews {
+		font-size: 12px;
+		line-height: 2.1;
+		color: #a2a6b0;
+	}
+	// .card-about__link
+	&__link {
+		display: flex;
+		font-size: 13px;
+		line-height: 1.46;
+		color: #000000;
+		margin: 0px 0px 15px 0px;
+	}
+	// .card-about__price1
+	&__price1 {
+		display: block;
+		color: #666666;
+		text-decoration: line-through;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	// .card-about__price
+	&__price {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.4;
+		color: #000000;
+	}
+}
